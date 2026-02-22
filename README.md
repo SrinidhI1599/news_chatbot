@@ -22,20 +22,23 @@ The application provides an interactive chat interface built with **Streamlit**,
 ```
 news_chatbot/
 │
-├── app.py                      # Main Streamlit application
+├── app.py                      # Main Streamlit application (UI + chat workflow)
 │
-├── services/
-│   └── api_handler.py          # Google News + Gemini API calls
+├── api_handler.py              # Handles Google News fetching and Gemini API communication
+│   
+├── prompt_manager.py           # Builds structured prompts using history and articles
 │
-├── prompts/
-│   └── prompt_manager.py       # Prompt building logic
+├── response_processor.py       # Cleans and formats model responses before display
 │
-├── core/
-│   └── response_processor.py   # Response formatting & cleaning
+├── logger.py                   # Configures application logging (logging setup & format)
 │
-├── requirements.txt            # Dependencies
-├── .env                        # API keys (not committed)
-└── README.md
+├── settings.py                 # Loads environment variables and stores configuration (API keys, model name)
+│
+├── requirements.txt            # Project dependencies
+│
+├── .env                        # Environment variables (API keys — not committed to GitHub)
+│
+└── README.md                   # Project documentation and usage instructions
 ```
 
 ---
