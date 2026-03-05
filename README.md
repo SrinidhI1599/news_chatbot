@@ -103,7 +103,7 @@ streamlit run app.py
 App will run on:
 
 ```
-http://localhost:8501
+http://13.61.13.152:8501
 ```
 
 ---
